@@ -62,6 +62,23 @@ flutter:
   assets:
     - assets/pizza_icon.jpg
     - assets/cheese_icon.png
+    - assets/pizza16.png
+    - assets/pizza15.png
+    - assets/pizza13.png
+    - assets/cheese1.jpg
+    - assets/pizza17.png
+    - assets/pizza18.png
+    - assets/registration_icon_white.png
+    - assets/pizza-logo4.png
+    - assets/pizza-logo10.png
+    - assets/pizza-logo11.png
+    - assets/pizza-logo12.png
+    - assets/pizza-logo13.png
+    - assets/Stamp.png
+    - assets/calculator_icon.png
+    - assets/calculator_icon1.png
+    - assets/calculator_icon2.png
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
