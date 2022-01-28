@@ -78,6 +78,9 @@ flutter:
     - assets/calculator_icon.png
     - assets/calculator_icon1.png
     - assets/calculator_icon2.png
+    - assets/pizza19.png
+    - assets/pizza5.png
+    - assets/auth_icon3.png
 
 
   # To add assets to your application, add an assets section, like this:

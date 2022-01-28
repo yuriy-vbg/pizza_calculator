@@ -35,7 +35,22 @@ class MyApp extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column (children: [
                 const SizedBox(height: 60,),
-                const SizedBox(width: 220, height: 168, child: Image (image: AssetImage('assets/images/pizza-logo12.png')),),
+                const SizedBox(width: 180, height: 120, child: Image (image: AssetImage('assets/auth_icon3.png')),),
+
+                const SizedBox(
+                  height:15,
+                ),
+                const Text("АВТОРИЗАЦИЯ",
+                    style: TextStyle( fontWeight: FontWeight.bold,fontSize: 20, color: Color(0xFFFFFFFF))),
+
+                const Divider(
+                  height: 20,
+                  thickness: 2,
+                  indent: 1,
+                  endIndent: 1,
+                  color: Colors.white,
+                ),
+
                 const SizedBox(height:5,),
                 const Text('введите логин в виде 10 цифр номера телефона',textAlign: TextAlign.center,
                   style: TextStyle(fontSize:16,color: Color.fromRGBO(255,255,255,0.9)),),
