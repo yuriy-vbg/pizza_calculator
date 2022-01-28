@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_calculator/registration_page.dart';
-
 import 'auth_page.dart';
 
 class NavigationDrawerScreen extends StatefulWidget {
