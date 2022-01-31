@@ -23,7 +23,7 @@ class _NavigationDemoState extends State<NavigationDemo> {
       //home: const MainScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => AuthPageScreen(),
+        '/': (context) => const PizzaCalculator(),
         '/auth_page': (context) => AuthPageScreen(),
         '/registration_page': (context) => RegistrationPage(),
         '/pizza_calculator_page': (context) => const PizzaCalculator(),
