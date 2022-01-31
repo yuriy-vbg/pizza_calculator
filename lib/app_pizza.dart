@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_calculator/auth_page.dart';
-
+import 'package:pizza_calculator/pizza_calculator_page.dart';
+import 'package:pizza_calculator/registration_page.dart';
 import 'nav_drawer.dart';
 import 'navigation_drawer_screen.dart';
 
@@ -23,8 +24,9 @@ class _NavigationDemoState extends State<NavigationDemo> {
       initialRoute: '/',
       routes: {
         '/': (context) => AuthPageScreen(),
-
         '/auth_page': (context) => AuthPageScreen(),
+        '/registration_page': (context) => RegistrationPage(),
+        '/pizza_calculator_page': (context) => const PizzaCalculator(),
       },
     );
   }
@@ -45,5 +47,3 @@ class MainScreen extends StatelessWidget {
         ));
   }
 }
-
-

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_switch/sliding_switch.dart';
 
+import 'nav_drawer.dart';
+import 'navigation_drawer_screen.dart';
+
 
 void main() {
   runApp(const PizzaCalculator());
@@ -58,12 +61,14 @@ class _PizzaCalculatorState extends State<PizzaCalculator> {
       _sauce = value; // с присвоением нового значения
     });
   }
-
+  final _messengerKey = GlobalKey<ScaffoldMessengerState>();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold (
+        appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: null),
+        drawer: navDrawer(context, _messengerKey),
         body: Container (
           decoration: const BoxDecoration(
             image: DecorationImage (
@@ -78,7 +83,7 @@ class _PizzaCalculatorState extends State<PizzaCalculator> {
             child: Column (
               children: [
                 const SizedBox(
-                  height: 62,
+                  height:40
                 ),
                 //SizedBox(
                // height: 150,

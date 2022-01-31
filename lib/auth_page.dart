@@ -43,7 +43,7 @@ class AuthPageScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 60,
+                    height: 40,
                   ),
                   const SizedBox(
                     width: 180,
@@ -140,15 +140,16 @@ class AuthPageScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const SizedBox(
-                    width: 200,
-                    height: 150,
-                    child: Image(image: AssetImage('assets/images/Stamp.png')),
-                  ),
+                  //const SizedBox(
+                   // width: 200,
+                    //height: 150,
+                    //child: Image(image: AssetImage('assets/images/Stamp.png')),
+                 // ),
                 ],
               ),
             ),
-          )),
+          )
+      ),
     );
   }
 }

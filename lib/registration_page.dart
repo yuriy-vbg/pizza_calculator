@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'nav_drawer.dart';
+import 'navigation_drawer_screen.dart';
+
 void main() {
-  runApp(const RegistrationPage());
+  runApp( RegistrationPage());
 }
 
 class RegistrationPage extends StatelessWidget {
-  const RegistrationPage ({Key? key}) : super(key: key);
+RegistrationPage ({Key? key}) : super(key: key);
+final _messengerKey = GlobalKey<ScaffoldMessengerState>();
 
   // This widget is the root of your application.
   @override
@@ -19,8 +23,11 @@ class RegistrationPage extends StatelessWidget {
       fontWeight: FontWeight.normal,
       color: Color(0xFFFFFFFF),
     );
+
     return MaterialApp(
       home: Scaffold(
+          appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: null),
+          drawer: navDrawer(context, _messengerKey),
           body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage (
@@ -33,9 +40,8 @@ class RegistrationPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: SingleChildScrollView(
               child: Column (children: [
-                const SizedBox(height: 60,),
+                const SizedBox(height: 40,),
                 const SizedBox(width: 170, height: 120, child: Image (image: AssetImage('assets/registration_icon_white.png')),),
-
                 const SizedBox(
                   height:15,
                 ),
@@ -94,8 +100,8 @@ class RegistrationPage extends StatelessWidget {
                 const SizedBox(height: 14,),
                 InkWell(child: const Text('после регистрации изменить пароль можно только в личном кабинете ',textAlign: TextAlign.center, style: linkTextStyle,),onTap:() {},),
 
-                const SizedBox(height: 13,),
-                const SizedBox(width: 200, height: 150, child: Image (image: AssetImage('assets/Stamp.png')),),
+                //const SizedBox(height: 13,),
+                //const SizedBox(width: 200, height: 150, child: Image (image: AssetImage('assets/Stamp.png')),),
 
                 const SizedBox(
                   height: 20,

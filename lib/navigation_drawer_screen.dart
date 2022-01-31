@@ -23,16 +23,17 @@ class _NavigationDrawerScreenState extends State<NavigationDrawerScreen> {
 
 
         home: Scaffold(
+
             appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: buttonStyle),
           drawer: Drawer(
             child: ListView(
                 padding: EdgeInsets.zero,
-                children: [
+                children: const [
 
                   ]
             ),
           ),
-    body: MaterialApp(
+    body: const MaterialApp(
     //initialRoute: '/',
     //routes: {
     // When navigating to the "/" route, build the FirstScreen widget.
