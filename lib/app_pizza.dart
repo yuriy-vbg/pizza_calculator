@@ -40,7 +40,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: null),
+        appBar: buildAppBar(titleStr: 'Pizza AppBarr', buttonStyle: null),
         drawer: navDrawer(context, _messengerKey),
         body: const Center(
           child: Text('Главная станица'),
