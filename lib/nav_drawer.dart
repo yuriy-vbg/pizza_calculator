@@ -73,8 +73,7 @@ Widget navDrawer(context, _messengerKey) => Drawer(
               ),
               onTap: () {
                 Navigator.pushNamed(context, '/pizza_calculator_page');
-                _messengerKey.currentState!.showSnackBar(const SnackBar(
-                    content: Text('Переход в Калькулятор пиццы')));
+
               },
             ),
           ),

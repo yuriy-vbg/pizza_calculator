@@ -203,7 +203,9 @@ class _PizzaCalculatorState extends State<PizzaCalculator> {
                                 _addCheese = value;
                                 _calcCost();
                               });
-                            }
+                            },
+                          activeColor: Colors.lightGreen,
+                          activeTrackColor: Colors.lightGreenAccent,
                         ),
                       ],
                     ),

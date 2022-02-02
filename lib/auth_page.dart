@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_calculator/app_pizza.dart';
+import 'package:pizza_calculator/navigation_demo.dart';
 
 import 'nav_drawer.dart';
 import 'navigation_drawer_screen.dart';
@@ -132,7 +132,7 @@ class AuthPageScreen extends StatelessWidget {
                   ),
                   InkWell(
                     child: const Text(
-                      'забыли пароль?',
+                      'забыли пароль??',
                       style: linkTextStyle,
                     ),
                     onTap: () {},
