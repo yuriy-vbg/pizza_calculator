@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_calculator/auth_page.dart';
-import 'package:pizza_calculator/pizza_calculator_page.dart';
-import 'package:pizza_calculator/registration_page.dart';
+import 'package:pizza_calculator/screens/auth_page.dart';
+import 'package:pizza_calculator/screens/pizza_calculator_page.dart';
+import 'package:pizza_calculator/screens/registration_page.dart';
 import 'nav_drawer.dart';
 import 'navigation_drawer_screen.dart';
 

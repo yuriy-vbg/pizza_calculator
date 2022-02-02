@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_calculator/registration_page.dart';
+import 'package:pizza_calculator/screens/registration_page.dart';
 import 'navigation_demo.dart';
-import 'auth_page.dart';
+
 
 class NavigationDrawerScreen extends StatefulWidget {
   const NavigationDrawerScreen({Key? key}) : super(key: key);

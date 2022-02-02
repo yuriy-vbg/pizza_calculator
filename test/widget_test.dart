@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pizza_calculator/auth_page.dart';
+import 'package:pizza_calculator/screens/auth_page.dart';
 
 import 'package:pizza_calculator/main.dart';
 

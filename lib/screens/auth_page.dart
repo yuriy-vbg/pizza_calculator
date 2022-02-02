@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_calculator/navigation_demo.dart';
+import 'package:pizza_calculator/screens/navigation_demo.dart';
 
 import 'nav_drawer.dart';
-import 'navigation_drawer_screen.dart';
+import '../screens/navigation_drawer_screen.dart';
 
 void main() {
   runApp(AuthPageScreen());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_calculator/nav_drawer.dart';
+import 'package:pizza_calculator/screens/nav_drawer.dart';
 import 'package:pizza_calculator/utils/global_theme.dart';
 import 'package:pizza_calculator/utils/strings.dart';
 import 'package:pizza_calculator/utils/global_theme.dart';
