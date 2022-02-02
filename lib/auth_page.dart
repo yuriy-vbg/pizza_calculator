@@ -132,7 +132,7 @@ class AuthPageScreen extends StatelessWidget {
                   ),
                   InkWell(
                     child: const Text(
-                      'забыли пароль??',
+                      'забыли пароль?',
                       style: linkTextStyle,
                     ),
                     onTap: () {},
