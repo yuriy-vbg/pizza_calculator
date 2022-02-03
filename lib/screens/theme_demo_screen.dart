@@ -151,7 +151,7 @@ class _ThemesDemoScreenState extends State<ThemesDemoScreen> {
           ),
           IconButton(
             icon: const Icon(Icons.settings),
-            tooltip: 'Уведомления!',
+            tooltip: 'Уведомления',
             onPressed: () {},
           ),
         ],
