@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_calculator/screens/nav_drawer1.dart';
 import 'package:sliding_switch/sliding_switch.dart';
 
 import 'nav_drawer.dart';
@@ -68,7 +69,7 @@ class _PizzaCalculatorState extends State<PizzaCalculator> {
     return MaterialApp(
       home: Scaffold (
         appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: null),
-        drawer: navDrawer(context, _messengerKey),
+        drawer: navDrawer1(context, _messengerKey),
         body: Container (
           decoration: const BoxDecoration(
             image: DecorationImage (

@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_calculator/screens/nav_drawer.dart';
+import 'package:pizza_calculator/screens/pizza_calculator_page.dart';
+import 'package:pizza_calculator/screens/registration_page.dart';
 import 'package:pizza_calculator/utils/global_theme.dart';
 import 'package:pizza_calculator/utils/strings.dart';
 import 'package:pizza_calculator/utils/global_theme.dart';
 import 'package:pizza_calculator/utils/strings.dart';
+import 'auth_page.dart';
+import 'nav_drawer1.dart';
+import 'navigation_drawer_screen.dart';
+
+
+main() {
+  runApp(const ThemesDemoApp());
+}
 
 class ThemesDemoApp extends StatelessWidget {
   const ThemesDemoApp({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +30,15 @@ class ThemesDemoApp extends StatelessWidget {
 
 class ThemesDemoScreen extends StatefulWidget {
   const ThemesDemoScreen({Key? key}) : super(key: key);
-
   @override
   _ThemesDemoScreenState createState() => _ThemesDemoScreenState();
 }
 
 class _ThemesDemoScreenState extends State<ThemesDemoScreen> {
-  double _currentSliderValue = 20;
-  bool _isDarkTheme = false;
+  final double _currentSliderValue = 20;
+  final bool _isDarkTheme = false;
 
-
-
-  Widget _navigationDraw() => Drawer(
+  /* Widget _navigationDraw() => Drawer(
     child: ListView(
       padding: EdgeInsets.zero,
       children: [
@@ -129,86 +137,167 @@ class _ThemesDemoScreenState extends State<ThemesDemoScreen> {
         ),
       ],
     ),
-  );
+  );*/
 
   PreferredSizeWidget _appBar() => AppBar(
-    title: const Text('Pizza App', ),
-    actions: [
-      IconButton(
-        icon: const Icon(Icons.add_alert),
-        tooltip: 'Уведомления',
-        onPressed: () {},
-      ),
-      IconButton(
-        icon: const Icon(Icons.settings),
-        tooltip: 'Уведомления',
-        onPressed: () {},
-      ),
-    ],
-  );
+        title: const Text(
+          'Pizza App',
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add_alert),
+            tooltip: 'Уведомления',
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            tooltip: 'Уведомления',
+            onPressed: () {},
+          ),
+        ],
+      );
+
 
   @override
   Widget build(BuildContext context) {
+        const borderStyle = OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(36)),
+        borderSide: BorderSide(color: Color(0xFFFFFFFF), width: 2));
+    const linkTextStyle = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+      color: Color(0xFFFFFFFF),
+    );
+
     return MaterialApp(
       theme: globalTheme(),
-
-
       home: Scaffold(
         appBar: _appBar(),
-        drawer: navDrawer(context, _messengerKey),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: [
-                Text('Заголовок', style: Theme.of(context).textTheme.headline6),
-                Container(
-                  height: 100,
-                  color: Theme.of(context).colorScheme.secondary,
-                ),
-                Row(
-                  children: const [
-                    Text('Логин: '),
-                    Expanded(child: TextField()),
-                  ],
-                ),
-                Row(
-                  children: const [
-                    Text('Пароль: '),
-                    Expanded(child: TextField()),
-                  ],
-                ),
-                ElevatedButton(onPressed: () {}, child: Text('Войти')),
-                const Text(Strings.longBodyText),
-                Slider(
-                  value: _currentSliderValue,
-                  max: 100,
-                  divisions: 5,
-                  label: _currentSliderValue.round().toString(),
-                  onChanged: (double value) {
-                    setState(() {
-                      _currentSliderValue = value;
-                    });
-                  },
-                ),
-                SwitchListTile(
-                    title: Text('Тёмная тема'),
-                    value: _isDarkTheme,
-                    onChanged: (val) {
-                      setState(() {
-                        _isDarkTheme = !_isDarkTheme;
-                        if (_isDarkTheme) {
-
-                        }
-                      });
-                    }),
-              ],
+        drawer: navDrawer1(context, _messengerKey),
+          body: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/pizza17.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            width: double.infinity,
+            height: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 50),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  const SizedBox(
+                    width: 180,
+                    height: 120,
+                    child: Image(image: AssetImage('assets/auth_icon3.png')),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Text("АВТОРИЗАЦИЯ",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Color(0xFFFFFFFF))),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 1,
+                    endIndent: 1,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    'введите логин в виде 10 цифр номера телефона',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Color.fromRGBO(255, 255, 255, 0.9)),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  const TextField(
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFFeceff1),
+                      enabledBorder: borderStyle,
+                      focusedBorder: borderStyle,
+                      labelText: 'телефон',
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFFeceff1),
+                      enabledBorder: borderStyle,
+                      focusedBorder: borderStyle,
+                      labelText: 'пароль',
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                    width: 154,
+                    height: 55,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('ВОЙТИ'),
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFF85C227),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(36.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  InkWell(
+                      child: const Text(
+                        'регистрация',
+                        style: linkTextStyle,
+                      ),
+                      onTap: () {}),
+                  const SizedBox(
+                    height: 14,
+                  ),
+                  InkWell(
+                    child: const Text(
+                      'забыли пароль?',
+                      style: linkTextStyle,
+                    ),
+                    onTap: () {},
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  //const SizedBox(
+                  // width: 200,
+                  //height: 150,
+                  //child: Image(image: AssetImage('assets/images/Stamp.png')),
+                  // ),
+                ],
+              ),
             ),
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {  },
-          child: Icon(Icons.add),
-        ),
+        /*floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ),*/
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
@@ -224,6 +313,4 @@ class _ThemesDemoScreenState extends State<ThemesDemoScreen> {
   }
 }
 
-class _messengerKey {
-}
-
+class _messengerKey {}

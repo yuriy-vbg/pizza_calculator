@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_calculator/screens/nav_drawer1.dart';
 
 import 'nav_drawer.dart';
 import 'navigation_drawer_screen.dart';
@@ -27,7 +28,7 @@ final _messengerKey = GlobalKey<ScaffoldMessengerState>();
     return MaterialApp(
       home: Scaffold(
           appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: null),
-          drawer: navDrawer(context, _messengerKey),
+          drawer: navDrawer1(context, _messengerKey),
           body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage (

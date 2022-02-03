@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_calculator/screens/nav_drawer1.dart';
 import 'package:pizza_calculator/screens/navigation_demo.dart';
 
 import 'nav_drawer.dart';
@@ -28,7 +29,7 @@ class AuthPageScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: buildAppBar(titleStr: 'Pizza AppBar', buttonStyle: null),
-          drawer: navDrawer(context, _messengerKey),
+          drawer: navDrawer1(context, _messengerKey),
           body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
