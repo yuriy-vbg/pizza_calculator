@@ -22,6 +22,7 @@ class ThemesDemoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       theme: globalTheme(),
       home: const ThemesDemoScreen(),
     );
