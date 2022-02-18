@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    _loadCounter();
+    _loadCounter(); //вызывается единожды при старте приложения
   }
 
   //Loading counter value on start
@@ -61,22 +61,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
-
             const SizedBox(
               height: 0,
             ),
             const SizedBox(
               width: 180,
               height: 120,
-              child: Image(image: AssetImage('assets/images/calculator_icon3.png')),
+              child: Image(
+                  image: AssetImage('assets/images/calculator_icon3.png')),
             ),
-
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(onPressed: (_incrementCounter), child: const Text('Нажми меня')),
-
+            ElevatedButton(
+                onPressed: (_incrementCounter),
+                child: const Text('Нажми меня')),
             const SizedBox(
               height: 20,
             ),
